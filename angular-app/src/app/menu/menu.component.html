@@ -4,10 +4,13 @@
 
     <ul class="navbar-nav">
       <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/home" class="nav-link">Home</a></li>
-      <li><a *ngIf="hardcodedAuthenticationService.isUserAdmin()" routerLink="/admin" class="nav-link">Admin</a></li>
+      <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/accounts" class="nav-link">Accounts</a></li>
+      <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/transaction-register" class="nav-link">My Transactions</a></li>
+      <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/transaction-register" class="nav-link">Transfers</a></li>
     </ul>
 
     <ul class="navbar-nav navbar-collapse justify-content-end">
+      <li><a *ngIf="hardcodedAuthenticationService.isUserAdmin()" routerLink="/admin" class="nav-link">Admin</a></li>
       <li><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
       <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
     </ul>

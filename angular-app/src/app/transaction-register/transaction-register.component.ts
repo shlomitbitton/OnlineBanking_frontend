@@ -8,14 +8,14 @@ import {TransactionListDataService} from '../service/data/transaction-list-data.
 })
 export class TransactionRegisterComponent implements OnInit {
 
-  constructor(private TransactionListDataService : TransactionListDataService) { }
+  constructor(private transactionListDataService : TransactionListDataService) { }
 
   ngOnInit(): void {
   }
 
   getTransactionsList(){
    // console.log("getting transactions list");
-    console.log(this.TransactionListDataService.executeTransactionList());
+    console.log(this.transactionListDataService.executeTransactionList());
   }
 
 }
