@@ -3,15 +3,28 @@
 
 
 <div class="text-center">
+  <h2> Users list</h2>
+<!--  <a href="{{shortLink}}">{{shortLink}}</a>-->
+
+  <table>
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Accounts</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users ">
+      <td><span>{{user.firstname}}</span></td>
+      <td><span>{{user.lastname}}</span></td>
+      <td><span>{{user.accounts}}</span></td>
+      <td><span>{{user.email}}</span></td>
+      <td><span>{{user.phone}}</span></td>
+    </tr>
+    </tbody>
+  </table>
 
 </div>
-
-<!-- Shareable short link of uoloaded file -->
-<div class="container text-center jumbotron"
-     *ngIf="shortLink">
-  <h2> Visit Here</h2>
-  <a href="{{shortLink}}">{{shortLink}}</a>
-</div>
-
-
-

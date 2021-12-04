@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {TransactionListDataService} from '../service/data/transaction-list-data.service';
+
+
+
 
 @Component({
   selector: 'app-transaction-register',
@@ -8,14 +10,11 @@ import {TransactionListDataService} from '../service/data/transaction-list-data.
 })
 export class TransactionRegisterComponent implements OnInit {
 
-  constructor(private transactionListDataService : TransactionListDataService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  getTransactionsList(){
-   // console.log("getting transactions list");
-    console.log(this.transactionListDataService.executeTransactionList());
-  }
+
 
 }

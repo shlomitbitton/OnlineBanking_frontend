@@ -13,6 +13,9 @@ import { AdminComponent } from './admin/admin.component';
 import { ErrorComponent } from './error/error.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import {ICINBankingDataService} from './service/data/icinbanking-data.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     HomeComponent,
     AccountsComponent,
-    AdminComponent
+    AdminComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ICINBankingDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
