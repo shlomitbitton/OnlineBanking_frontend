@@ -1,11 +1,7 @@
 export interface IUser{
-   userKey: number,
-   firstname: string,
-   lastname: string,
+   firstName: string,
+   lastName: string,
    accounts: [],
    email: string,
-   phone: number,
-   username: string,
-   password: string,
-   pin: number
+   phone: number
 }
