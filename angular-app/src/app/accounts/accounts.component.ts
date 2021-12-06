@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ICINBankingDataService} from '../service/data/icinbanking-data.service';
+import {IUserAccounts} from '../service/data/userAccounts';
 
 @Component({
   selector: 'app-accounts',
@@ -7,14 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountsComponent implements OnInit {
 
- // user: string= '';
-  constructor() { }
+  public userAccounts: IUserAccounts[] = [];
 
-  ngOnInit(): void {
- // this.user = this.route.snapshot.params['user'];
-  }
+  constructor(private icinbankingDataService : ICINBankingDataService) { }
 
-  getAllUserAccounts(){
-    console.log("These are the user accounts");
-  }
+  ngOnInit() {
+       this.icinbankingDataService.getUserAccounts(1).subscribe(data => this.userAccounts = data);
+   }
 }

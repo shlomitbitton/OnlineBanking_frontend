@@ -3,3 +3,21 @@
 <div class="container">
   <!--Welcome {{user}}-->
 </div>
+<div>
+
+  <table align="center" border="1">
+    <thead>
+    <tr>
+      <th>Account Type</th>
+      <th>Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let account of userAccounts">
+      <td><span>{{account.accountType}}</span></td>
+      <td><span>{{account.balance}}</span></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
