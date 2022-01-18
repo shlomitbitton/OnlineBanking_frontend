@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {IUser} from './user';
 import {IUserAccounts} from './userAccounts';
-
+import {IUserTransactions} from './userTransactions';
 
 
 @Injectable({
@@ -11,15 +11,8 @@ import {IUserAccounts} from './userAccounts';
 })
 export class ICINBankingDataService {
 
-//     let userKey = new HttpParams().set('userKey', 1);
     constructor( private http: HttpClient){
      }
-
-//   executeTransactionList(){
-//       this.http.get<any>('http://localhost:8080/allTransactions').subscribe(response => {
-//       console.log(response)
-//       });
-//   }
 
 
 
@@ -29,4 +22,7 @@ export class ICINBankingDataService {
 
   getUserAccounts(userKey: number): Observable<IUserAccounts[]>{
   return this.http.get<IUserAccounts[]>('http://localhost:8080/users/1/accounts')}
+
+   getUserTransactions(toAccount: number, fromAccount: number): Observable<IUserTransactions[]>{
+    return this.http.get<IUserTransactions[]>('http://localhost:8080/allTransactions?toAccount=1&fromAccount=2')}
 }

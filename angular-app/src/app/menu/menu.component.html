@@ -3,7 +3,7 @@
     <div><a href="" class="navbar-brand">ICIN Bank</a></div>
 
     <ul class="navbar-nav">
-      <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/home" class="nav-link">Home</a></li>
+      <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/transactionRegister" class="nav-link">Transactions</a></li>
       <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/accounts" class="nav-link">Accounts</a></li>
       <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/transaction-register" class="nav-link">Transfer</a></li>
       <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/transaction-register" class="nav-link">Request</a></li>

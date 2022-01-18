@@ -4,3 +4,29 @@
 <!--  {{getTransactionsList()}}-->
 </div>
 
+<div>
+
+  <table align="center" border="1">
+    <thead>
+    <tr>
+      <th>Transaction Type</th>
+      <th>Amount</th>
+      <th>From account</th>
+      <th>To account</th>
+      <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let trans of transactions">
+      <td><span>{{trans.transactionType}}</span></td>
+      <td><span>{{trans.amount}}</span></td>
+      <td><span>{{trans.toAccount}}</span></td>
+      <td><span>{{trans.fromAccount}}</span></td>
+      <td><span>{{trans.timestamp}}</span></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+

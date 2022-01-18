@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ICINBankingDataService} from '../service/data/icinbanking-data.service';
+import {IUserTransactions} from '../service/data/userTransactions';
 
 
 
@@ -10,10 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionRegisterComponent implements OnInit {
 
-  constructor() { }
+  public transactions: IUserTransactions[] = [];
+  constructor(private icinbankingDataService : ICINBankingDataService) { }
 
-  ngOnInit(): void {
-  }
+   ngOnInit() {
+          this.icinbankingDataService.getUserTransactions(1,1).subscribe(data => this.transactions = data);
+   }
 
 
 
