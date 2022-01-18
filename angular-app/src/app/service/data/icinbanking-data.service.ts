@@ -28,5 +28,5 @@ export class ICINBankingDataService {
   }
 
   getUserAccounts(userKey: number): Observable<IUserAccounts[]>{
-  return this.http.get<IUserAccounts[]>('http://localhost:8080/userAccounts/${userKey}')}
+  return this.http.get<IUserAccounts[]>('http://localhost:8080/users/${userKey}')}
 }
