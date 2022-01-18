@@ -9,11 +9,11 @@ import {IUserAccounts} from '../service/data/userAccounts';
 })
 export class AccountsComponent implements OnInit {
 
-  public userAccounts: IUserAccounts[] = [];
+  public accounts: IUserAccounts[] = [];
 
   constructor(private icinbankingDataService : ICINBankingDataService) { }
 
   ngOnInit() {
-       this.icinbankingDataService.getUserAccounts(1).subscribe(data => this.userAccounts = data);
+       this.icinbankingDataService.getUserAccounts(1).subscribe(data => this.accounts = data);
    }
 }
