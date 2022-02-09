@@ -17,12 +17,12 @@ export class ICINBankingDataService {
 
 
   getUsers(): Observable<IUser[]> {
-    return this.http.get<IUser[]>('http://localhost:8080/allUsers');
+    return this.http.get<IUser[]>('http://172.31.12.234:8080/allUsers');
   }
 
   getUserAccounts(userKey: number): Observable<IUserAccounts[]>{
-  return this.http.get<IUserAccounts[]>('http://localhost:8080/users/1/accounts')}
+  return this.http.get<IUserAccounts[]>('http://172.31.12.234:8080/users/1/accounts')}
 
    getUserTransactions(toAccount: number, fromAccount: number): Observable<IUserTransactions[]>{
-    return this.http.get<IUserTransactions[]>('http://localhost:8080/allTransactions?toAccount=1&fromAccount=2')}
+    return this.http.get<IUserTransactions[]>('http://172.31.12.234:8080/allTransactions?toAccount=1&fromAccount=2')}
 }
